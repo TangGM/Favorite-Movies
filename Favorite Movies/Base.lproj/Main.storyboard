@@ -39,7 +39,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="120.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ULP-kQ-0bw">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="12919623_10206058533638470_8173399479916948770_n" translatesAutoresizingMaskIntoConstraints="NO" id="ULP-kQ-0bw">
                                                     <rect key="frame" x="8" y="0.0" width="120" height="120"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="120" id="8DW-N3-ubp"/>
@@ -301,22 +301,8 @@
             </objects>
             <point key="canvasLocation" x="381" y="356"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="riV-xA-AY1">
-            <objects>
-                <viewController id="nNt-BI-M6L" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ceE-V3-djU"/>
-                        <viewControllerLayoutGuide type="bottom" id="ruZ-JZ-arM"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zO8-RU-Tae">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JFO-Sn-Um3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
+    <resources>
+        <image name="12919623_10206058533638470_8173399479916948770_n" width="960" height="960"/>
+    </resources>
 </document>

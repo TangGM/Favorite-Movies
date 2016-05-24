@@ -16,6 +16,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "onMoviesLoaded:", name: "moviesLoaded", object: nil)
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -23,11 +24,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let movie = DataService.instance.loadedMovies[indexPath.row]
+        if let cell = tableView.dequeueReusableCellWithIdentifier("MovieCell") as? MovieCell {
+            cell.configureCell(movie)
+            return cell
+        } else {
+            let cell = MovieCell()
+            cell.configureCell(movie)
+            return cell
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return DataService.instance.loadedMovies.count
+    }
+    
+    func onMoviesLoaded(sender: AnyObject) {
+        tableView.reloadData()
     }
 
 }
